@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johan - Dino</title>
+    <style>
+        body{
+            height: 100vh;
+            background: #8b52ec;
+            display: flex;
+            align-items: center;
+        }
+        .contenedor{
+            width: 900px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+
+            background: linear-gradient(#cdc5d7, transparent) #1ec0e5;
+            transition: background-color is lineal;
+            overflow: hidden;
+        }
+
+        .dino{
+            width: 84px;
+            height: 84px;
+
+            position: absolute;
+            bottom: 22px;
+            left: 22px;
+            z-index: 2;
+            background: url(img/dino.png);
+            background-size: 330px 84px;
+            background-position: 0x;
+        }
+
+        .suelo{
+            width: 200%;
+            height: 42px;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            background: url(img/suelo.png) repeat-x 0px 0px;
+            background-size: 50% 42px;
+        }
+
+        .dino-corriendo{
+            animation: animarDino 0.25s steps(2) infinite;
+        }
+
+        @keyframes animarDino{
+            from{
+                background-position-x: -84px;
+            }
+            to{
+                background-position-x: -252px;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+        <div class="suelo"></div>
+        <div class="dino dino-corriendo"></div>
+    </div>
+</body>
+</html>
